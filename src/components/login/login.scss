@@ -1,0 +1,171 @@
+$header-family: 'Inter';
+$header-style: normal;
+$header-weight: 500;
+$header-size: 35px;
+$header-align: center;
+
+$input-family: 'Inter';
+$input-style: normal;
+$input-weight: 300;
+$input-size: 16px;
+$input-align: center;
+
+$button-family: 'Inter';
+$button-style: normal;
+$button-weight: 400;
+$button-size: 16px;
+$button-align: center;
+
+$login-family: 'Inter';
+$login-style: normal;
+$login-weight: 400;
+$login-size: 18px;
+$login-align: center;
+
+.login {
+    h1 {
+        text-align: center;
+
+        font-family: $header-family;
+        font-style: $header-style;
+        font-weight: $header-weight;
+        font-size: $header-size;
+        text-align: $header-align;
+    }
+    .login-form {
+
+        width: 400px;
+        height: 300px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        border: 3px solid #616161;
+        box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.26);
+        border-radius: 40px;
+
+        background-color: rgb(233, 233, 233);
+
+        #email-field {
+            width: 80%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #email {
+                width: 100%;
+                height: 30px;
+
+                border-radius: 15px;
+
+                font-family: $input-family;
+                font-style: $input-style;
+                font-weight: $input-weight;
+                font-size: $input-size;
+                text-align: $input-align;
+
+                text-align: center;
+            }
+        }
+        #password-field {
+            width: 80%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            #password {
+                width: 85%;
+                height: 30px;
+
+                border-radius: 15px;
+
+                font-family: $input-family;
+                font-style: $input-style;
+                font-weight: $input-weight;
+                font-size: $input-size;
+                text-align: $input-align;
+
+                text-align: center;
+            }
+
+            #visibility {
+                height: 90%;
+
+                aspect-ratio: 1/1;
+            
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: #aeaeae;
+
+                border: 2px solid #616161;
+                border-radius: 50px;
+
+                img {
+                    width: 20px;
+                }
+            }
+
+            #visibility:hover {
+                cursor: pointer;
+                filter: brightness(0.8);
+            }
+        }
+
+        #submit {
+            width: 40%;
+            height: 35px;
+
+            border-radius: 20px;
+            border: 2px solid #616161;
+
+            color: #ffffff;
+            text-transform: uppercase;
+
+            background-color: #aeaeae;
+
+            font-family: $button-family;
+            font-style: $button-style;
+            font-weight: $button-weight;
+            font-size: $button-size;
+            text-align: $button-align;
+        }
+
+        #submit:hover {
+            cursor: pointer;
+            filter: brightness(0.8);
+        }
+    }
+    .register {
+        width: 100%;
+        height: 80px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+ 
+        p {
+            margin: 0;
+
+            font-family: $login-family;
+            font-style: $login-style;
+            font-weight: $login-weight;
+            font-size: $login-size;
+            text-align: $login-align;
+        }
+
+        a {
+            font-family: $login-family;
+            font-style: $login-style;
+            font-weight: $login-weight;
+            font-size: $login-size;
+            text-align: $login-align;
+        }
+    }
+}

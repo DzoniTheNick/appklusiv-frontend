@@ -1,0 +1,57 @@
+$welcome-family: 'Inter';
+$welcome-style: normal;
+$welcome-weight: 500;
+$welcome-size: 30px;
+$welcome-align: center;
+
+$button-family: 'Inter';
+$button-style: normal;
+$button-weight: 400;
+$button-size: 16px;
+$button-align: center;
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .text-area {
+        p {
+
+            font-family: $welcome-family;
+            font-style: $welcome-style;
+            font-weight: $welcome-weight;
+            font-size: $welcome-size;
+            text-align: $welcome-align;
+
+            text-align: center;
+        }
+    }
+    
+    .logout-option {
+        button {
+            width: 150px;
+            height: 35px;
+
+            border-radius: 20px;
+            border: 2px solid #616161;
+
+            color: #ffffff;
+            text-transform: uppercase;
+
+            background-color: #aeaeae;
+
+            font-family: $button-family;
+            font-style: $button-style;
+            font-weight: $button-weight;
+            font-size: $button-size;
+            text-align: $button-align;
+        }
+
+        button:hover {
+            cursor: pointer;
+            filter: brightness(0.8);
+        }
+    }
+}
