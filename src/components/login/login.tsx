@@ -7,6 +7,8 @@ import invisible from '../../assets/svg/invisible.svg';
 import User from '../../util/interfaces/User';
 import { Link, useNavigate } from 'react-router-dom';
 
+import * as dotenv from 'dotenv';
+
 const Login = () => {
   const [user, setUser] = useState({} as User);
   const [isVisible, setIsVisible] = useState(false);
@@ -47,7 +49,7 @@ const Login = () => {
 
   const loginUser = async (e: FormEvent) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:6200/user/login', {
+    const response = await fetch(`${process.env.REACT_APP_PROD_SERVER}/user/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -60,10 +62,16 @@ const Login = () => {
     if(data.status === 'ok') {
       localStorage.setItem('token', data.token);
       navigate('/home');
-    }else {
-      alert('The combination of the given email and password do not exist! Please try again!');
+    }else if(data.status === 'no_user'){
+      alert('A user with the given email address does not exist!');
       return;
-    };
+    }else if(data.status === 'wrong_pass'){
+      alert('You have entered the wrong password!');
+      return;
+    }else {
+      alert(`Error while retrieving user ${data.error}`);
+      return;
+    }
   };
 
   return(

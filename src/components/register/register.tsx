@@ -10,6 +10,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
+  
+
   const [user, setUser] = useState({} as User);
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
@@ -49,7 +51,7 @@ const Register = () => {
 
   const registerUser = async (e: FormEvent) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:6200/user/register', {
+    const response = await fetch(`${process.env.REACT_APP_PROD_SERVER}/user/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -5,7 +5,6 @@ import Register from './components/register/register';
 import Home from './components/home/home';
 
 import './app.scss';
-import { useEffect } from 'react';
 
 const App = () => {
     return(
