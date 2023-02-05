@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/appklusiv-frontend/static/css/main.5229ba8e.css",
+    "main.js": "/appklusiv-frontend/static/js/main.c4503531.js",
+    "static/media/invisible.svg": "/appklusiv-frontend/static/media/invisible.91619593c6aaece2b50e3b7a2839f911.svg",
+    "static/media/visible.svg": "/appklusiv-frontend/static/media/visible.9db89ca988212aa4d7ce141f36912754.svg",
+    "index.html": "/appklusiv-frontend/index.html",
+    "main.5229ba8e.css.map": "/appklusiv-frontend/static/css/main.5229ba8e.css.map",
+    "main.c4503531.js.map": "/appklusiv-frontend/static/js/main.c4503531.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5229ba8e.css",
+    "static/js/main.c4503531.js"
+  ]
+}
